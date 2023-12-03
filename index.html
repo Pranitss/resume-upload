@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Resume Editor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    #resume-container {
+      width: 400px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #resume-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    input[type="file"] {
+      margin-bottom: 10px;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div id="resume-container">
+  <form id="resume-form">
+    <label for="photo">Upload Photo:</label>
+    <input type="file" id="photo" name="photo" accept="image/*">
+    
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+    <label for="about">About Me:</label>
+    <textarea id="about" name="about" placeholder="A brief introduction about yourself" rows="4" required></textarea>
+
+    <button type="button" onclick="saveResume()">Save</button>
+  </form>
+</div>
+
+<script>
+  function saveResume() {
+    // Add your code to handle the form submission, including photo upload
+    // This is a client-side example, and you need to implement server-side logic for file handling.
+    // Example: You can use FormData to send the form data to the server using AJAX.
+
+    // var formData = new FormData(document.getElementById('resume-form'));
+    // You can use fetch or another AJAX library to send the form data to the server.
+    // Example using fetch:
+    // fetch('/your-server-endpoint', {
+    //   method: 'POST',
+    //   body: formData
+    // })
+    // .then(response => response.json())
+    // .then(data => {
+    //   // Handle the response from the server
+    //   console.log(data);
+    // })
+    // .catch(error => {
+    //   console.error('Error:', error);
+    // });
+  }
+</script>
+
+</body>
+</html>
